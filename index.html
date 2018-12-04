@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Karmayoga Ernakulam</title>
+    <link rel="stylesheet" href="./styles/life.css">
+    <link rel="stylesheet" href="./styles/animate.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./styles/modernizr-2.6.2.min.js"></script>
+    <script src="./styles/wow.js"></script>
+    <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("Dec 8, 2018 17:00:00").getTime();
+            
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+            
+                // Get todays date and time
+                var now = new Date().getTime();
+                
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+                
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Output the result in an element with id="demo"
+                document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+                
+                // If the count down is over, write some text 
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+            }, 1000);
+            </script>
+    <script>
+
+        new WOW().init();
+        $(".navbar").css("background" , "#344d6e");
+        $(document).ready(function(){
+            //sectio loader
+            $(".divload").on('click', function(event) {
+                if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 700, function(){
+                    window.location.hash = hash;
+                });
+                }                
+            });
+            //nav back
+            $(".navbar").css("background" , "#344d6e");
+            $(".navbar").css("color" , "white");
+            var navheight=document.getElementById('navigate').clientHeight;
+            $("#firstcontent").css("margin-top" , navheight);
+            //adjust image
+            var scrheight=$( window ).height();
+            var img = document.getElementById('imgone');
+            var height=img.clientHeight;
+            heigth=scrheight-height;
+            //scroll effect for nav
+            $(window).scroll(function(){
+  	            var scroll = $(window).scrollTop();
+	            if (scroll > 100) {
+	                $(".navbar").css("background" , "white");
+                    $(".navbar").css("color" , "black");
+	            }
+	            else{
+		            $(".navbar").css("background" , "#344d6e");  
+                    $(".navbar").css("color" , "white");	
+	            }
+            });
+            var profwidth=document.getElementById('profimg').clientWidth;
+            console.log(scrheight);
+            $("#first-div").css("height",scrheight);
+            $(".fbg").css("height",scrheight);
+            $('#imgone').css("margin-top",scrheight-height);
+            $("#firstcontent").css("margin-top" , (scrheight/2)-navheight-100);
+        });
+    </script>
+</head>
+<body>
+    <nav id="navigate" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid cnt">
+            <center>
+                    <ul class="nav navbar-nav">
+                            <li><a class="divload" href="#next1-class">Schedule</a></li>
+                            <li><a class="divload" href="#trainers-section">Trainers</a></li>
+                            <li><a class="divload" href="#services">Our Services</a></li>
+                    </ul>
+            </center>
+        </div>
+    </nav>
+    <div class="fbg">.</div>
+    <div class="firstdiv" id="first-div">
+        <div class="container-fluid" style="z-index: 2;">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+                    <img class="wow fadeIn img-responsive" src="./img/guru1.png" id="imgone" width="100%" class="firstimg" >
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" id="firstcontent" >
+                    <blockquote class="wow fadeInRight slow" style="color:white !important;">
+                        <p><q>Human evolution has two steps - from being somebody to being nobody and from being nobody to being everybody.This knowledge can bring sharing and caring throughout the world.</q></p>
+                        <footer>Sri Sri Ravi Shankar</footer>
+                      </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="firstd" id="about">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Karmayoga</h3>
+                    <hr style="border-top:1px solid grey;">
+<p>We believe that empowering communities to take up developmental projects brings accountability through the active participation of the entire community. Projects are most successful when the community takes ownership at every stage, right from planning and funding to implementation and sustainability of their initiatives.</p>
+<p>The Art of Living’s role is to become a driver of change by helping communities to shift their mindset from a ‘want state’ to becoming the ‘drivers of change’ themselves. We do this through our capacity building workshops, awareness campaigns, resource-building exercises and by offering technical expertise to help communities become independent and empowered.</p>
+<p>The Art of Living has made Youth Leadership Training Program (YLTP) its vehicle for this transformation, resulting in efficient and effective delivery of its projects. Motivated youth are selected from the local communities and trained appropriately.</p>
+<p>The YLTP focusses on personal development and communication skills. Through stress-reducing breathing techniques, individuals find inner peace and communities to come together in a spirit of service. Participants are inspired to volunteer for rural projects. The fruits of the seeds sown in these sessions are experienced by the community as a whole.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid " id="next1-class">
+        <div class="msg">
+            <div class="msgin">
+                <h5>Next Training on</h5>
+                <div class="container dates wow fadeIn slow">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>Date : 00-00-0000</p>
+                        </div>
+                        <div class="col-lg-6">
+                                <p>Venue : xxxxxx xxxxxx</p>
+                        </div>
+                        <div class="col-lg-12">
+                                <p>Reporting Time : 00:00 </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timer wow fadeIn slow" id="dem">00d 00h 00m 00s</div>
+        <div class="" style="text-align:center">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScjrmBHUHE2trA6FazqJ3FJsuaOSJSu6vDChNdG7beyVEZwjQ/viewform?usp=sf_link" class="btn btn-primary">Register</a>
+        </div>
+        <div class="container">
+            <h5>Contact</h5>
+            <div class="row" style="border-top:1px solid grey;border-bottom:1px solid grey;">
+            <div class="col-md-12">
+            <p>Sarath</p>
+            <p>+91 828-127-0897</p>
+            </div>
+           
+        </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    <div class="seconddiv condiv" id="trainers-section">
+        <div class="container-fluid">
+        <div class="row bordr">
+            <h3>Trainers</h3>
+            <hr style="border-top:1px solid grey;">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 bordr">
+            <center class="wow fadeIn slow">
+                <img class="imageprof img-responsive" id="profimg" src="./img/hari.jpg">
+                <h4>Harikrishnan</h4>
+                <span class="label label-primary">First Trainer from Kerala</span>
+                <span class="label label-primary">Senior Trainer</span>
+            </center>
+            <div class="wow fadeInUp slow">
+                <p>Harikrishnan 23yrs with Guruji participated in first yltp at bnglr ashram worked as yuvacharya for 4yrs started teaching yltp from 2003 onwards aim of yltp is to create a self sufficient,self reliant society Profession Mechanical Engineer</p>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 bordr">
+                <center class="wow fadeIn slow">
+                    <img class="imageprof img-responsive" id="profimg" src="./img/rakesh.jpg">
+                    <h4>Rakesh</h4>
+                    <span class="label label-primary">YLTP State Co-ordinator</span>
+                    <span class="label label-primary">Senior Trainer</span>
+                </center>
+                <div class="wow fadeInUp slow">
+                    <p>Rakesh, state coordinator of Karmakoga. He is an International Trainer of the Art of Living. his classes , which includes in foreign countries. She lives in Vyttila, Ernakulam.</p>
+                </div>
+            </div>
+                <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 bordr">
+                        <center class="wow fadeIn slow">
+                            <img class="imageprof img-responsive" id="profimg" src="./img/johny.jpg">
+                            <h4>Johny</h4>
+                            <span class="label label-primary">Master Trainer</span>
+                        </center>
+                        <div class="wow fadeInUp slow">
+                            <p>PG johny is the senior trainer of YLTP. He has been working with YLTP for 8 years and also an active member of Art of Living.He serves as a teacher as well as an organizer since 2000.  He is the CEO and Director of Vignjan School of Yoga Charitable trust.He is also a Ganhian, Environmentalist, Farmer,and a journalist.Apart from this PG johny is a social worker too. He is awarded with Yoga Shiromani in the year. With his gracefull 40 years of experience in Yoga he is making wonders in the minds of Youths.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 bordr">
+                            <center class="wow fadeIn slow">
+                                <img class="imageprof " width="200" id="profimg" src="./img/gopan.jpg">
+                                <h4>Gopakumar</h4>
+                                <span class="label label-primary">Senior Trainer</span>
+                            </center>
+                            <div class="wow fadeInUp slow">
+                                <p>Retired as Divisional Accounts Officer in Government Service The Art of Living Course was first performed 18 years ago, Teacher for 9 years. The Youth Leadership Training Program is the strongest of any Guruji's courses. This is a course that facilitates the child's ability to use it effectively. I see the most satisfying moments in my life that have been the trainer of the year so many of the youths have become physically, mentally and emotionally strong through this course.</p>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        </div>
+        <div class="container-fluid">
+                <div class="row bordr">
+                        <h3>Brahmachari's</h3>
+                        <hr style="border-top:1px solid grey;">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 bordr">
+                    <center class="wow fadeIn slow">
+                        <img class="imageprof img-responsive" id="profimg" src="./img/brahmapad.jpg">
+                        <h4>Brahmapad</h4>
+                        <span class="label label-primary">Brahmachari</span>
+                    </center>
+                    <div class="wow fadeInUp slow">
+                        <p>From 2003 onwards I am with Art of living. In the year 2009 I was doing full time seva as a coordinator in Divine Karnataka Project, village development program by Art Of Living . From 2013 Owards I am with VDS department and doing seva as Brahmachari in Kerala . I take YLTP , and HP courses. And also organize and conduct Poojas with VDS. As a strong devotee of Gurudev I am enjoying as well as grateful to do seva for  his vision, "Vasudeva Kudumbakam".</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 bordr">
+                        <center class="wow fadeIn slow">
+                            <img class="imageprof img-responsive" id="profimg" src="./img/shinto.jpg">
+                            <h4>Shinto</h4>
+                            <span class="label label-primary">Brahmachari</span>
+                            <div class="wow fadeInUp slow">
+                                <p>Brahmachari Shinto, He is a teacher of Art of Living and is an international trainer of the Art of Living from around 2001. More than 2000 youths from different parts of the country have been able to become part of the Karmayoga. From 2016 onwards, the priesthood is being done in various states of India as part of Dharma. Children, adolescents and young people are being trained through various promotions. He is also a teacher of Sahaj Samadhi Yoga ...</p>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                </div>
+                <div class="container-fluid">
+                        <div class="row bordr">
+                                <h3>Lady Trainer's</h3>
+                                <hr style="border-top:1px solid grey;">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bordr">
+                                    <center class="wow fadeIn slow">
+                                        <img class="imageprof img-responsive" id="profimg" src="./img/sheela.jpg">
+                                        <h4>Sheela</h4>
+                                        <span class="label label-primary">Lady Trainer</span>
+                                    </center>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bordr">
+                                    <center class="wow fadeIn slow">
+                                        <img class="imageprof img-responsive" id="profimg" src="./img/shalini.jpg">
+                                        <h4>Shalini</h4>
+                                        <span class="label label-primary">Zonal coordinator</span>
+                                        <span class="label label-primary">Lady Trainer</span>
+                                    </center>
+                                </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 bordr">
+                            <center class="wow fadeIn slow">
+                                <img class="imageprof img-responsive" id="profimg" src="./img/rani.jpg">
+                                <h4>Rani</h4>
+                                <span class="label label-primary">Lady Trainer</span>
+                            </center>
+                        </div>
+                       
+                        </div>
+                        </div>
+        </div>
+    <div class="contianer-fluid" id="services">
+        <div class="row ">
+                <h3>Our Services</h3>
+                <hr style="border-top:1px solid grey;">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="msg msgcpl">
+                <div class="msgin">
+                <h4>Blood Bank (Ernakulam)</h4>
+                <p><strong>Contact Person : Akshey</strong></p>
+                <p>Contact No : 987654312</p>
+            </div>
+            </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="msg msgcpl">
+                    <div class="msgin">
+                    
+                        <p><strong>There are many social activities which have been undertaken by yuvacharyas who have completed Karmayoga. We have been able to participate in many activities in relation with rebuilding ok kerala. We have undertaken  services during chennai flood ,gaja cyclone and many other natural disasters. During the post flood time in kerala our youth have been able to participate in cleaning process of over more than 500 houses in connection with the rebuilding kerala mission. Moreover Karmayoga is a training that prepares the youth to actively indulge in environmental activities,blood donation campaigns, through which we aim in preserving human values in the run to development,many volunteers have been actively involved in blood donation camps in various hospitals in ernakulam district. Also we have been able to build houses for the house less and for the last 5 years we have taken the educational responsibility of more than 51 children. Furthermore we have also been able to creatively tackle many social issues</strong></p>
+                </div>
+                </div>
+                </div>
+                </div>
+              
+        </div>
+    </div>
+
+</body>
+</html>
